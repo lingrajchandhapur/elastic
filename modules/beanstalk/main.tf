@@ -2,7 +2,7 @@
 # IAM ROLE FOR EC2 (Beanstalk)
 # -------------------------------
 resource "aws_iam_role" "eb_instance_role" {
-  name = "timesheet-eb-instance-role-v717"
+  name = "timesheet-eb-instance-role-v1997"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -22,7 +22,7 @@ resource "aws_iam_role_policy_attachment" "eb_web_tier" {
 }
 
 resource "aws_iam_instance_profile" "eb_instance_profile" {
-  name = "timesheet-eb-instance-profile-v717"
+  name = "timesheet-eb-instance-profile-v1997"
   role = aws_iam_role.eb_instance_role.name
 }
 
@@ -30,7 +30,7 @@ resource "aws_iam_instance_profile" "eb_instance_profile" {
 # SERVICE ROLE (VERY IMPORTANT)
 # -------------------------------
 resource "aws_iam_role" "eb_service_role" {
-  name = "timesheet-eb-service-role-v717"
+  name = "timesheet-eb-service-role-v1997"
 
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
@@ -53,14 +53,14 @@ resource "aws_iam_role_policy_attachment" "eb_service_policy" {
 # ELASTIC BEANSTALK APPLICATION
 # -------------------------------
 resource "aws_elastic_beanstalk_application" "app" {
-  name = "timesheet-app-v717"
+  name = "timesheet-app-v1997"
 }
 
 # -------------------------------
 # ELASTIC BEANSTALK ENVIRONMENT
 # -------------------------------
 resource "aws_elastic_beanstalk_environment" "env" {
-  name                = "timesheet-env-v717"
+  name                = "timesheet-env-v1997"
   application         = aws_elastic_beanstalk_application.app.name
   solution_stack_name = "64bit Amazon Linux 2023 v4.11.0 running Python 3.11"
 

@@ -74,5 +74,5 @@ module "beanstalk" {
 module "frontend" {
   source = "./modules/frontend"
 
-  bucket_name = "timesheet-frontend-LINGRAJ-20240115-unique"
+  bucket_name = "timesheet-frontend-lingu-20240115-unique"
 }

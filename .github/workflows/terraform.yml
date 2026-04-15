@@ -6,7 +6,7 @@ on:
       - lingarj
 
 env:
-  AWS_REGION: ap-south-2
+  AWS_REGION: ap-south-1
 
 jobs:
   terraform:

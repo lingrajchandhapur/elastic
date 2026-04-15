@@ -34,8 +34,6 @@ jobs:
       - name: Terraform Init
         run: terraform init
 
-      # Terraform Plan
-      - name: Terraform Plan
 
       # Terraform destroy
       - name: Terraform destroy
